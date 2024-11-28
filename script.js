@@ -48,12 +48,14 @@ let questions = [
       if (userAnswer === question.correctAnswer) {
         this.score++;
         document.getElementById('result').textContent = 'Correct! Daniel san';
+        changeImageOnCorrectAnswer();
       } else {
         document.getElementById('result').textContent = 'Wrong! Daniel san';
         if (this.difficulty === 'hard') {
           document.getElementById('result').textContent += ' Game over! Your score is: ' + this.score;
           return;
         }
+        changeImageOnWrongAnswer();
       }
       this.currPosition++;
       this.showQuestion();
@@ -63,3 +65,29 @@ let questions = [
   // Add event listeners to the difficulty buttons
   document.getElementById('normal-btn').onclick = () => app.start('normal');
   document.getElementById('hard-btn').onclick = () => app.start('hard');
+
+  function changeImageOnWrongAnswer() {
+    var imgElement = document.getElementById('quiz-image');
+    imgElement.src = 'assets/images/KarateSausage.webp'; // Update with the path to your new image
+  }
+
+  function changeImageOnCorrectAnswer() {
+    var imgElement = document.getElementById('quiz-image');
+    imgElement.src = 'assets/images/pow.webp'; // Update with the path to your new image
+  }
+
+  // Example function to simulate a wrong answer
+  function onWrongAnswer() {
+    changeImageOnWrongAnswer();
+  }
+
+  // Example function to simulate a correct answer
+  function onCorrectAnswer() {
+    changeImageOnCorrectAnswer();
+  }
+
+  // Simulate a wrong answer after 3 seconds (for demonstration purposes)
+  // setTimeout(onWrongAnswer, 3000);
+
+  // Simulate a correct answer after 3 seconds (for demonstration purposes)
+  // setTimeout(onCorrectAnswer, 3000);
