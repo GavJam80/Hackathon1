@@ -51,11 +51,11 @@ let questions = [
         changeImageOnCorrectAnswer();
       } else {
         document.getElementById('result').textContent = 'Wrong! Daniel san';
+        changeImageOnWrongAnswer(); // Call this function before checking the difficulty mode
         if (this.difficulty === 'hard') {
           document.getElementById('result').textContent += ' Game over! Your score is: ' + this.score;
           return;
         }
-        changeImageOnWrongAnswer();
       }
       this.currPosition++;
       this.showQuestion();
