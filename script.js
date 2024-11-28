@@ -49,6 +49,12 @@ let questions = [
     alternatives: ['strike', 'dodge', 'receive', 'give'],
     correctAnswer: 2
   },
+  {
+    title: 'Obi',
+    alternatives: ['strike', 'belt', 'receive', 'give'],
+    correctAnswer: 1
+  },
+  
 ];
 
 let app = {
@@ -69,6 +75,9 @@ let app = {
         element.onclick = () => this.checkAnswer(index);
       });
     } else {
+      if (this.difficulty === 'hard' && this.score === questions.length) {
+        changeImageAllCorrect();
+      }
       document.getElementById('result').textContent = 'Quiz finished! Your score is: ' + this.score;
     }
   },
@@ -81,8 +90,9 @@ let app = {
       changeImageOnCorrectAnswer();
     } else {
       document.getElementById('result').textContent = 'Wrong! Daniel san';
-      changeImageOnWrongAnswer(); // Call this function before checking the difficulty mode
+      changeImageOnWrongAnswer();
       if (this.difficulty === 'hard') {
+        changeImageBasedOnScore(this.score);
         document.getElementById('result').textContent += ' Game over! Your score is: ' + this.score;
         return;
       }
@@ -104,6 +114,53 @@ function changeImageOnWrongAnswer() {
 function changeImageOnCorrectAnswer() {
   var imgElement = document.getElementById('quiz-image');
   imgElement.src = 'assets/images/pow.webp'; // Update with the path to your new image
+}
+
+function changeImageBasedOnScore(score) {
+  var imgElement = document.getElementById('quiz-image');
+  switch(score) {
+    case 1:
+      imgElement.src = 'assets/images/WhiteBelt.webp'; // Update with the path to your new image
+      break;
+    case 2:
+      imgElement.src = 'assets/images/OrangeBelt.webp'; // Update with the path to your new image
+      break;
+    // Add more cases as needed
+    case 3:
+      imgElement.src = 'assets/images/RedBelt.webp'; // Update with the path to your new image
+      break;
+      case 4:
+      imgElement.src = 'assets/images/YellowBelt.webp'; // Update with the path to your new image
+      break;
+      case 5:
+      imgElement.src = 'assets/images/GreenBelt.webp'; // Update with the path to your new image
+      break;
+      case 6:
+      imgElement.src = 'assets/images/PurpleBelt.webp'; // Update with the path to your new image
+      break;
+      case 7:
+      imgElement.src = 'assets/images/PurpleWhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 8:
+      imgElement.src = 'assets/images/BrownBelt.webp'; // Update with the path to your new image
+      break;
+      case 9:
+      imgElement.src = 'assets/images/BrownWhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 10:
+      imgElement.src = 'assets/images/Brown2WhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 11:
+      imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
+      break;
+    default:
+      imgElement.src = 'assets/images/shrine-154572_640.webp'; // Default image
+  }
+}
+
+function changeImageAllCorrect() {
+  var imgElement = document.getElementById('quiz-image');
+  imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
 }
 
 // Example function to simulate a wrong answer
