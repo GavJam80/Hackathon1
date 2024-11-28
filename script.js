@@ -1,11 +1,16 @@
+// DOM Element Section
+// select HTML elements from the DOM using their IDs
+
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+// currentQuestionIndex tracks which question is currently being displayed
+// score keeps the user's score
 let currentQuestionIndex = 0;
 let score = 0;
 
-// quiz questions and answers
+// Questions Array/quiz questions and answers
 let questions = [
   {
     question: "What is 'hajime' in karate?",
@@ -29,59 +34,96 @@ let questions = [
   {
     question: "What is zenkutsu-dachi in karate?",
     answers: [
-      {text:"front stance", correct: true},
-      {text:"back stance", correct: false},
-      {text: "horse stance", correct: false},
-      {text:"cat stance", correct: false},
-    ]
+      { text: "front stance", correct: true },
+      { text: "back stance", correct: false },
+      { text: "horse stance", correct: false },
+      { text: "cat stance", correct: false },
+    ],
   },
   {
-    question:"What is nukite in karate?",
-    alternatives: ["punch", "elbow", "back hand", "spear-hand"],
-    correctAnswer: 3,
+    question: "What is nukite in karate?",
+    answers: [
+      {text: "punch", correct: false},
+      {text: "elbow", correct: false},
+      {text: "back hand", correct: false},
+      {text: "spear-hand", correct: true},
+     ],
   },
   {
     question: "What is mae-geri in karate?",
-    alternatives: ["round house", "snap kick", "thrust kick", "front kick"],
-    correctAnswer: 3,
+    answers: [
+      {text:"snap kick", correct: false}, 
+      {text:"thrust kick", correct: false}, 
+      {text:"round house", correct: false}, 
+      {text:"front kick", correct: true},
+    ],
   },
   {
     question: "What is shuto-uke in karate?",
-    alternatives: ["knife hand block", "punch", "kick", "elbow strike"],
+    answers: [
+      {text:"knife hand block"}, 
+      {text:"punch"}, 
+      {text:"kick"}, 
+      {text:"elbow strike"}
+    ],
     correctAnswer: 0,
   },
   {
     question: "What is yoko-geri in karate?",
-    alternatives: ["side kick", "front kick", "back kick", "roundhouse kick"],
-    correctAnswer: 0,
+    answers: [
+      text:"side kick"}, 
+      {text:"front kick"}, 
+      {text:"back kick"}, 
+      {text:"roundhouse kick"}
+    ],
   },
   {
     question: "What is Jodan in karate?",
-    alternatives: ["high", "middle", "low", "behind"],
-    correctAnswer: 0,
+    answers: [
+      {text:"high", corre }
+      {text:"middle", }
+      {text:"low", }
+      {text:"behind"}
+    ],
   },
   {
     question: "What is Agi-uke in karate?",
-    alternatives: ["high block", "middle-block", "low block", "capture"],
+    answers: [text:"high block"}, 
+      {text:"middle-block"}, 
+      {text:"low block"}, 
+      {text:"capture"}],
     correctAnswer: 0,
   },
   {
     question: "What is Chudan in karate?",
-    alternatives: ["high", "middle", "low", "behind"],
+    answers: [text:"high"}, 
+      {text:"middle"},
+      {text: "low"}, 
+      {text:"behind"}],
     correctAnswer: 1,
   },
   {
     question: "What is Uke in karate?",
-    alternatives: ["strike", "dodge", "receive", "give"],
-    correctAnswer: 2,
+    answers: [
+      {text:"strike"}, 
+        {text:"dodge"}, 
+        {text:"receive"}, 
+        {text:"give"},
+      ],
   },
-  {
+
+    {
     question: "What is Obi in karate?",
-    alternatives: ["strike", "belt", "receive", "give"],
-    correctAnswer: 1,
+    answers: [
+      {text:"strike"}, 
+      {text:"belt"}, 
+      {text:"receive"}, 
+      {text:"give"}
+    ],
   },
 ];
 
+// startQuiz() Function initializes the quiz by resetting the question index and score, hiding the next button, and showing the first question.
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -89,6 +131,11 @@ function startQuiz() {
   showQuestion();
 }
 
+// showQuestion() Function displays the current question and its answers. 
+// It first resets the state of the quiz by calling the resetState() function, then it gets the current question from the questions array using the currentQuestionIndex. 
+// It sets the question text to the questionElement and creates a button for each answer. 
+// It adds the Bootstrap outline class to each button and sets the correct attribute to the button if the answer is correct. 
+// It then appends the button to the answerButtonsElement. Finally, it adds an event listener to each button that calls the selectAnswer() function when clicked.
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
