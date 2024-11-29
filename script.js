@@ -61,64 +61,64 @@ let questions = [
   {
     question: "What is shuto-uke in karate?",
     answers: [
-      {text:"knife hand block"}, 
-      {text:"punch"}, 
-      {text:"kick"}, 
-      {text:"elbow strike"}
+      {text:"knife hand block", correct: true}, 
+      {text:"punch", correct: false}, 
+      {text:"kick", correct: false}, 
+      {text:"elbow strike, correct: false"},
     ],
-    correctAnswer: 0,
   },
   {
     question: "What is yoko-geri in karate?",
     answers: [
-      text:"side kick"}, 
-      {text:"front kick"}, 
-      {text:"back kick"}, 
-      {text:"roundhouse kick"}
+      {text:"side kick", correct: true}, 
+      {text:"front kick", correct: false}, 
+      {text:"back kick", correct: false}, 
+      {text:"roundhouse kick",  correct: false},
     ],
   },
   {
     question: "What is Jodan in karate?",
     answers: [
-      {text:"high", corre }
-      {text:"middle", }
-      {text:"low", }
-      {text:"behind"}
+      {text:"high", correct: true},
+      {text:"middle", correct: false},
+      {text:"low", correct: false},
+      {text:"behind", correct: false},
     ],
   },
   {
     question: "What is Agi-uke in karate?",
-    answers: [text:"high block"}, 
-      {text:"middle-block"}, 
-      {text:"low block"}, 
-      {text:"capture"}],
-    correctAnswer: 0,
+    answers: [
+      {text:"high block", correct: false}, 
+      {text:"middle-block", correct: false}, 
+      {text:"low block", correct: false}, 
+      {text:"capture", correct: true},
+    ],
   },
   {
     question: "What is Chudan in karate?",
-    answers: [text:"high"}, 
-      {text:"middle"},
-      {text: "low"}, 
-      {text:"behind"}],
-    correctAnswer: 1,
+    answers: [
+      {text:"high", correct: false}, 
+      {text:"middle", correct: true},
+      {text: "low", correct: false}, 
+      {text:"behind", correct: false},
+    ],
   },
   {
     question: "What is Uke in karate?",
     answers: [
-      {text:"strike"}, 
-        {text:"dodge"}, 
-        {text:"receive"}, 
-        {text:"give"},
+      {text:"strike", correct: false}, 
+        {text:"dodge", correct: false}, 
+        {text:"receive", correct: true}, 
+        {text:"give", correct: false},
       ],
   },
-
     {
     question: "What is Obi in karate?",
     answers: [
-      {text:"strike"}, 
-      {text:"belt"}, 
-      {text:"receive"}, 
-      {text:"give"}
+      {text:"strike", correct: false}, 
+      {text:"belt", correct: true}, 
+      {text:"receive", correct: false}, 
+      {text:"give", correct: false},
     ],
   },
 ];
