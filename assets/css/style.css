@@ -1,75 +1,43 @@
-body {
-    background: whitesmoke;
-    font-family: ariel;
-    text-align: center;
+/* --------- Heading */
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
 }
 
-#wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Add gap between flex items */
+.logo {
+  height: 145px;
+  padding-right: 5px;
 }
 
-#wrapper div, #wrapper ul {
-    width: 70%; /* Increase width to allow for longer questions and answers */
-    max-width: 600px; /* Increase max-width */
-}
-
-ul {
-    padding: 0;
-}
-
-#title {
-    font-size: 24px; /* Increase font size for the question */
-    font-weight: bold;
-    background: red;
-    border: 3px solid black; /* Add border for better visibility */
-    padding: 20px; /* Increase padding for more space */
-    margin-bottom: 20px; /* Add margin below title */
-}
-
-#header {
-    background: red;
-    border: 3px solid black;
-    padding: 10px;
-    margin-bottom: 20px; /* Add margin below header */
-}
-
-.alternative {
-    list-style-type: none;
-    margin-bottom: 10px; /* Increase margin between alternatives */
-    padding: 15px; /* Increase padding for more space */
-    background: red; /* Add background color for better visibility */
-    border: 3px solid black; /* Add border for better visibility */
-    cursor: pointer; /* Change cursor to pointer to indicate clickability */
-}
-
-.alternative:hover {
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    opacity: 0.8;
-}
-
-#result {
-    font-weight: bold;
-    margin-top: 20px; /* Add margin above result */
-}
-
-#score, #result {
-    color: black;
-}
-
-#score {
-    margin-top: 20px; /* Add margin above score */
-}
-
-#image-placeholder {
-    width: 33%; /* Set width to 33% of the screen */
-    margin-top: 20px; /* Add margin above the image placeholder */
-}
-
-#image-placeholder img {
-    width: 100%; /* Ensure the image takes up the full width of the placeholder */
-    height: auto; /* Maintain aspect ratio */
-}
+  }
+  
+  .btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .btn.correct {
+    background-color: #9aeabc;
+  }
+  
+  .btn.wrong {
+    background-color: #f8b7bd;
+  }
+  
+  .hide {
+    display: none;
+  }
