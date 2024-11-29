@@ -4,12 +4,19 @@ body {
     text-align: center;
 }
 
-#wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Add gap between flex items */
+#wrapper{
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 20px;
+}
+#wrapper h1{
+  background:  #fff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #wrapper div, #wrapper ul {
@@ -20,7 +27,30 @@ body {
 ul {
     padding: 0;
 }
-
+#normal-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: ;
+  }
+#hard-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: ;
+}
 #title {
     font-size: 24px; /* Increase font size for the question */
     font-weight: bold;
@@ -31,24 +61,27 @@ ul {
 }
 
 #header {
-    background: red;
+    background: #001e4d;
     border: 3px solid black;
     padding: 10px;
     margin-bottom: 20px; /* Add margin below header */
 }
 
 .alternative {
+    color: #fff;
     list-style-type: none;
     margin-bottom: 10px; /* Increase margin between alternatives */
     padding: 15px; /* Increase padding for more space */
     background: red; /* Add background color for better visibility */
-    border: 3px solid black; /* Add border for better visibility */
+    border: 3px solid #222; /* Add border for better visibility */
     cursor: pointer; /* Change cursor to pointer to indicate clickability */
 }
 
 .alternative:hover {
     cursor: pointer;
     opacity: 0.8;
+    background: #116;
+    color: #fff;
 }
 
 #result {
