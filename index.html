@@ -1,96 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets\css\style.css" />
-
-        <!-- favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon-16x16.png" />
-
-      <!-- Font Awesome -->
-      <script
-      src="https://kit.fontawesome.com/f4d3164857.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Googel Fonts -->
-
-    <!-- Bootstrap CSS -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\style.css">
     <title>Karate Term Quiz</title>
-  </head>
-  
-  
-  <body>
-<!-- Header layout & making it central-->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center">Karate Term Quiz</h1>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Karate Term Quiz</h1>
         </div>
-      </div> -->
-
-      <h1 class="heading">
-        <img src="/assets/images/karate-logo-with-red-sunset_109706-134.avif" alt="" class="logo"/> Karate Term Quiz
-      </h1>
-
-
-      <!-- Question area -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div id="quiz-container" class="text-center p-4 bg-light rounded">
-              <h2 id="question" class="mb-4"></h2>
-              <div id="answer-buttons" class="btn-grid">
-          <!-- Answer buttons will be dynamically added here -->
+        <div id="intro">
+            <p>Welcome to the Karate Term Quiz! Test your knowledge of Karate terms and improve your skills. Choose a difficulty level to start the quiz.</p>
         </div>
-        <button id="next-btn" class="btn btn-primary mt-3 hide">Next</button>
-      </div>
-   
-
-
-
-
-
-      
-        <!-- Result and score display -->
-      <div id="result"></div>
-      <div id="score"></div> 
-
-      <!-- Result and score display -->
-      <!--<div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-      </div>-->
-
-      <!-- icon scoring system -->
-      <div id="score-icons"></div>        
-      </div>
+        <div id="difficulty-buttons">
+            <button id="normal-btn">Training</button>
+            <button id="hard-btn">Grading</button>
+        </div>
+        <div id="title"></div>
+        <ul id="choices">
+            <li class="alternative"></li>
+            <li class="alternative"></li>
+            <li class="alternative"></li>
+            <li class="alternative"></li>
+        </ul>
+        <div id="result"></div>
+        <div id="score"></div>
+        <div id="image-placeholder">
+            <img id="quiz-image" src="assets/images/shrine-154572_640.webp" alt="Karate Image">
+        </div>
     </div>
-
-
-
-
-
-
-
-
-  
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-  </body>
+    <script src="script.js"></script> 
+</body>
 </html>
