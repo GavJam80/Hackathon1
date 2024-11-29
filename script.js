@@ -1,196 +1,180 @@
-// DOM Element Section
-// select HTML elements from the DOM using their IDs
-
-const questionElement = document.getElementById("question");
-const answerButtonsElement = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
-
-// currentQuestionIndex tracks which question is currently being displayed
-// score keeps the user's score
-let currentQuestionIndex = 0;
-let score = 0;
-
-// Questions Array/quiz questions and answers
 let questions = [
   {
-    question: "What is 'hajime' in karate?",
-    answers: [
-      { text: "Begin", correct: true },
-      { text: "Stop", correct: false },
-      { text: "Ready", correct: false },
-      { text: "Bow", correct: false },
-    ],
-  },
-
-  {
-    question: "What is 6?",
-    answers: [
-      { text: "Ichi", correct: false },
-      { text: "Go", correct: false },
-      { text: "Roku", correct: true },
-      { text: "San", correct: false },
-    ],
+    title: '6',
+    alternatives: ['ichi', 'go', 'roku', 'san'],
+    correctAnswer: 2
   },
   {
-    question: "What is zenkutsu-dachi in karate?",
-    answers: [
-      { text: "front stance", correct: true },
-      { text: "back stance", correct: false },
-      { text: "horse stance", correct: false },
-      { text: "cat stance", correct: false },
-    ],
+    title: 'zenkutsu-dachi',
+    alternatives: ['front stance', 'back stance', 'horse stance', 'cat stance'],
+    correctAnswer: 0
   },
   {
-    question: "What is nukite in karate?",
-    answers: [
-      {text: "punch", correct: false},
-      {text: "elbow", correct: false},
-      {text: "back hand", correct: false},
-      {text: "spear-hand", correct: true},
-     ],
+    title: 'nukite',
+    alternatives: ['punch', 'elbow', 'back hand', 'spear-hand'],
+    correctAnswer: 3
   },
   {
-    question: "What is mae-geri in karate?",
-    answers: [
-      {text:"snap kick", correct: false}, 
-      {text:"thrust kick", correct: false}, 
-      {text:"round house", correct: false}, 
-      {text:"front kick", correct: true},
-    ],
+    title: 'mae-geri',
+    alternatives: ['round house', 'snap kick', 'thrust kick', 'front kick'],
+    correctAnswer: 3
   },
   {
-    question: "What is shuto-uke in karate?",
-    answers: [
-      {text:"knife hand block", correct: true}, 
-      {text:"punch", correct: false}, 
-      {text:"kick", correct: false}, 
-      {text:"elbow strike, correct: false"},
-    ],
+    title: 'shuto-uke',
+    alternatives: ['knife hand block', 'punch', 'kick', 'elbow strike'],
+    correctAnswer: 0
   },
   {
-    question: "What is yoko-geri in karate?",
-    answers: [
-      {text:"side kick", correct: true}, 
-      {text:"front kick", correct: false}, 
-      {text:"back kick", correct: false}, 
-      {text:"roundhouse kick",  correct: false},
-    ],
+    title: 'yoko-geri',
+    alternatives: ['side kick', 'front kick', 'back kick', 'roundhouse kick'],
+    correctAnswer: 0
   },
   {
-    question: "What is Jodan in karate?",
-    answers: [
-      {text:"high", correct: true},
-      {text:"middle", correct: false},
-      {text:"low", correct: false},
-      {text:"behind", correct: false},
-    ],
+    title: 'Jodan',
+    alternatives: ['high', 'middle', 'low', 'behind'],
+    correctAnswer: 0
   },
   {
-    question: "What is Agi-uke in karate?",
-    answers: [
-      {text:"high block", correct: false}, 
-      {text:"middle-block", correct: false}, 
-      {text:"low block", correct: false}, 
-      {text:"capture", correct: true},
-    ],
+    title: 'Agi-uke',
+    alternatives: ['high block', 'middle-block', 'low block', 'capture'],
+    correctAnswer: 0
   },
   {
-    question: "What is Chudan in karate?",
-    answers: [
-      {text:"high", correct: false}, 
-      {text:"middle", correct: true},
-      {text: "low", correct: false}, 
-      {text:"behind", correct: false},
-    ],
+    title: 'Chudan',
+    alternatives: ['high', 'middle', 'low', 'behind'],
+    correctAnswer: 1
   },
   {
-    question: "What is Uke in karate?",
-    answers: [
-      {text:"strike", correct: false}, 
-        {text:"dodge", correct: false}, 
-        {text:"receive", correct: true}, 
-        {text:"give", correct: false},
-      ],
+    title: 'Uke',
+    alternatives: ['strike', 'dodge', 'receive', 'give'],
+    correctAnswer: 2
   },
-    {
-    question: "What is Obi in karate?",
-    answers: [
-      {text:"strike", correct: false}, 
-      {text:"belt", correct: true}, 
-      {text:"receive", correct: false}, 
-      {text:"give", correct: false},
-    ],
+  {
+    title: 'Obi',
+    alternatives: ['strike', 'belt', 'receive', 'give'],
+    correctAnswer: 1
   },
+  
 ];
 
-// startQuiz() Function initializes the quiz by resetting the question index and score, hiding the next button, and showing the first question.
-function startQuiz() {
-  currentQuestionIndex = 0;
-  score = 0;
-  nextButton.classList.add("hide");
-  showQuestion();
-}
+let app = {
+  start: function(difficulty) {
+    this.currPosition = 0;
+    this.score = 0;
+    this.difficulty = difficulty;
+    this.showQuestion();
+  },
 
-// showQuestion() Function displays the current question and its answers. 
-// It first resets the state of the quiz by calling the resetState() function, then it gets the current question from the questions array using the currentQuestionIndex. 
-// It sets the question text to the questionElement and creates a button for each answer. 
-// It adds the Bootstrap outline class to each button and sets the correct attribute to the button if the answer is correct. 
-// It then appends the button to the answerButtonsElement. Finally, it adds an event listener to each button that calls the selectAnswer() function when clicked.
-function showQuestion() {
-  resetState();
-  let currentQuestion = questions[currentQuestionIndex];
-  questionElement.innerText = currentQuestion.question;
-
-  currentQuestion.answers.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerText = answer.text;
-    button.classList.add("btn", "btn-outline-primary"); // Add Bootstrap outline class
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
+  showQuestion: function() {
+    if (this.currPosition < questions.length) {
+      let question = questions[this.currPosition];
+      document.getElementById('title').textContent = question.title;
+      let choices = document.querySelectorAll('.alternative');
+      choices.forEach((element, index) => {
+        element.textContent = question.alternatives[index];
+        element.onclick = () => this.checkAnswer(index);
+      });
+    } else {
+      if (this.difficulty === 'hard' && this.score === questions.length) {
+        changeImageAllCorrect();
+      }
+      document.getElementById('result').textContent = 'Quiz finished! Your score is: ' + this.score;
     }
-    button.addEventListener("click", selectAnswer);
-    answerButtonsElement.appendChild(button);
-  });
+  },
+
+  checkAnswer: function(userAnswer) {
+    let question = questions[this.currPosition];
+    if (userAnswer === question.correctAnswer) {
+      this.score++;
+      document.getElementById('result').textContent = 'Correct! Daniel san';
+      changeImageOnCorrectAnswer();
+    } else {
+      document.getElementById('result').textContent = 'Wrong! Daniel san';
+      changeImageOnWrongAnswer();
+      if (this.difficulty === 'hard') {
+        changeImageBasedOnScore(this.score);
+        document.getElementById('result').textContent += ' Game over! Your score is: ' + this.score;
+        return;
+      }
+    }
+    this.currPosition++;
+    this.showQuestion();
+  }
+};
+
+// Add event listeners to the difficulty buttons
+document.getElementById('normal-btn').onclick = () => app.start('normal');
+document.getElementById('hard-btn').onclick = () => app.start('hard');
+
+function changeImageOnWrongAnswer() {
+  var imgElement = document.getElementById('quiz-image');
+  imgElement.src = 'assets/images/KarateSausage.webp'; // Update with the path to your new image
 }
 
-function resetState() {
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+function changeImageOnCorrectAnswer() {
+  var imgElement = document.getElementById('quiz-image');
+  imgElement.src = 'assets/images/pow.webp'; // Update with the path to your new image
+}
+
+function changeImageBasedOnScore(score) {
+  var imgElement = document.getElementById('quiz-image');
+  switch(score) {
+    case 1:
+      imgElement.src = 'assets/images/WhiteBelt.webp'; // Update with the path to your new image
+      break;
+    case 2:
+      imgElement.src = 'assets/images/OrangeBelt.webp'; // Update with the path to your new image
+      break;
+    // Add more cases as needed
+    case 3:
+      imgElement.src = 'assets/images/RedBelt.webp'; // Update with the path to your new image
+      break;
+      case 4:
+      imgElement.src = 'assets/images/YellowBelt.webp'; // Update with the path to your new image
+      break;
+      case 5:
+      imgElement.src = 'assets/images/GreenBelt.webp'; // Update with the path to your new image
+      break;
+      case 6:
+      imgElement.src = 'assets/images/PurpleBelt.webp'; // Update with the path to your new image
+      break;
+      case 7:
+      imgElement.src = 'assets/images/PurpleWhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 8:
+      imgElement.src = 'assets/images/BrownBelt.webp'; // Update with the path to your new image
+      break;
+      case 9:
+      imgElement.src = 'assets/images/BrownWhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 10:
+      imgElement.src = 'assets/images/Brown2WhiteBelt.webp'; // Update with the path to your new image
+      break;
+      case 11:
+      imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
+      break;
+    default:
+      imgElement.src = 'assets/images/shrine-154572_640.webp'; // Default image
   }
 }
 
-function selectAnswer(e) {
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct === "true";
-  setStatusClass(selectedButton, correct);
-  Array.from(answerButtonsElement.children).forEach((button) => {
-    setStatusClass(button, button.dataset.correct === "true");
-  });
-  if (questions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove("hide");
-  } else {
-    startButton.innerText = "Restart";
-    startButton.classList.remove("hide");
-  }
+function changeImageAllCorrect() {
+  var imgElement = document.getElementById('quiz-image');
+  imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
 }
 
-function setStatusClass(element, correct) {
-  clearStatusClass(element);
-  if (correct) {
-    element.classList.add("correct");
-  } else {
-    element.classList.add("wrong");
-  }
+// Example function to simulate a wrong answer
+function onWrongAnswer() {
+  changeImageOnWrongAnswer();
 }
 
-function clearStatusClass(element) {
-  element.classList.remove("correct");
-  element.classList.remove("wrong");
+// Example function to simulate a correct answer
+function onCorrectAnswer() {
+  changeImageOnCorrectAnswer();
 }
 
-nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
-  showQuestion();
-});
+// Simulate a wrong answer after 3 seconds (for demonstration purposes)
+// setTimeout(onWrongAnswer, 3000);
 
-startQuiz();
+// Simulate a correct answer after 3 seconds (for demonstration purposes)
+// setTimeout(onCorrectAnswer, 3000);
