@@ -125,7 +125,7 @@ ul {
     padding-top: 15px; /* Add padding for spacing */
 }
 
-#normal-btn, #hard-btn {
+#normal-btn, #hard-btn #reset-btn{
     background: red; /* Background color */
     color: white; /* Text color */
     border: 3px solid black; /* Border */
@@ -138,7 +138,7 @@ ul {
     transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 }
 
-#normal-btn:hover, #hard-btn:hover {
+#normal-btn:hover, #hard-btn:hover #reset-btn:hover{
     background: darkred; /* Darker background on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
@@ -174,9 +174,10 @@ ul {
 
 #difficulty-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center buttons horizontally */
     gap: 15px; /* Add space between buttons */
-    margin: 20px 0; /* Add margin for spacing */
+    height: 100px; /* Ensure the container has a defined height */
+    max-width: 500px; /* Limit the width of the container */
 }
 
 #difficulty-buttons button {
@@ -189,6 +190,11 @@ ul {
     border-radius: 10px; /* Rounded edges */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    flex: 1; /* Make buttons take up equal space */
+    display: flex; /* Use flexbox for button content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: 100%; /* Make buttons take up the full height of the container */
 }
 
 #difficulty-buttons button:hover {
@@ -196,8 +202,11 @@ ul {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Responsive Styles */
+#normal-btn {
+    margin: 0; /* Remove margin */
+}
 
+/* Responsive Styles */
 
 @media (min-width: 1200px) {
     #quiz-container {
@@ -263,6 +272,17 @@ ul {
 }
 
 @media (max-width: 400px) {
+    #difficulty-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    #difficulty-buttons button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px; /* Add margin between buttons */
+    }
+
     p, #quiz p, h1, #title, #header, .alternative, #result, #score, #image-placeholder {
         padding: 5px; /* Adjust padding for smaller screens */
         font-size: large;
