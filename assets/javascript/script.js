@@ -1,3 +1,4 @@
+// Array of questions
 let questions = [
   {
     title: '6',
@@ -56,6 +57,28 @@ let questions = [
   },
   
 ];
+
+// Function to shuffle the array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// Shuffle the questions array
+shuffleArray(questions);
+
+// Function to display the questions (example)
+function displayQuestions() {
+  questions.forEach((q, index) => {
+    console.log(`Question ${index + 1}: ${q.title}`);
+    // Add code to display the question in the UI
+  });
+}
+
+// Call the function to display the questions
+displayQuestions();
 
 let app = {
   start: function(difficulty) {
