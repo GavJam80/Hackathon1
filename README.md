@@ -261,3 +261,4 @@ Supplemental learning resources directly used / referenced within this project:
 * [Font Awesome](#https://fontawesome.com/)
 * [FreePik](#https://www.freepik.com/premium-vector/karate-logo-with-red-sunset_24779702.htm)
 * [Coolors](#https://coolors.co/image-picker)
+* [AI images](https://designer.microsoft.com/))  
