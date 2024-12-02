@@ -116,12 +116,13 @@ ul {
 #image-placeholder {
     width: 70%; /* Reduce the size by 30% */
     max-width: 600px;
-    margin-top: 20px; /* Add margin for spacing */
+    margin-top: 20px; /* Add margin for spacing */;
 }
 
 #image-placeholder img {
     width: 100%; /* Ensure the image takes up the full width of the placeholder */
     height: auto; /* Maintain aspect ratio */
+    padding-top: 15px; /* Add padding for spacing */
 }
 
 #normal-btn, #hard-btn {
