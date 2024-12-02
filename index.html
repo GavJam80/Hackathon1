@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets\css\style.css">
     <title>Karate Term Quiz</title>
 </head>
+
 <body>
     <div id="wrapper">
         <div id="header">
             <h1>Karate Term Quiz</h1>
+            <p>Welcome to the Karate Term Quiz! Test your knowledge of Karate terms and improve your skills. Choose
+                a difficulty level to start the quiz.</p>
         </div>
-        <div id="intro">
-            <p>Welcome to the Karate Term Quiz! Test your knowledge of Karate terms and improve your skills. Choose a difficulty level to start the quiz.</p>
+        
         </div>
         <div id="difficulty-buttons">
             <button id="normal-btn">Training</button>
             <button id="hard-btn">Grading</button>
         </div>
-        <div id="title"></div>
-        <ul id="choices">
-            <li class="alternative"></li>
-            <li class="alternative"></li>
-            <li class="alternative"></li>
-            <li class="alternative"></li>
-        </ul>
-        <div id="result"></div>
-        <div id="score"></div>
-        <div id="image-placeholder">
-            <img id="quiz-image" src="assets/images/shrine-154572_640.webp" alt="Karate Image">
+        <div id="quiz-container">
+            <div id="quiz-content">
+                <div id="title"></div>
+                <ul id="choices">
+                    <li class="alternative"></li>
+                    <li class="alternative"></li>
+                    <li class="alternative"></li>
+                    <li class="alternative"></li>
+                </ul>
+                <div id="result"></div>
+                <div id="score"></div>
+            </div>
+            <div id="image-placeholder">
+                <img id="quiz-image" src="assets/images/karate-logo-with-red-sunset_109706-134.avif" alt="result Image">
+            </div>
         </div>
     </div>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
+
 </html>

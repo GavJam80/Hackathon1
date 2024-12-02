@@ -106,52 +106,53 @@ let app = {
 document.getElementById('normal-btn').onclick = () => app.start('normal');
 document.getElementById('hard-btn').onclick = () => app.start('hard');
 
+
+// wrong or correct image
 function changeImageOnWrongAnswer() {
-  var imgElement = document.getElementById('quiz-image');
-  imgElement.src = 'assets/images/KarateSausage.webp'; // Update with the path to your new image
+  var imgElement = document.getElementById('quiz-image'); 
+  imgElement.src = 'assets/images/KarateSausage.webp'; 
 }
 
 function changeImageOnCorrectAnswer() {
   var imgElement = document.getElementById('quiz-image');
-  imgElement.src = 'assets/images/pow.webp'; // Update with the path to your new image
+  imgElement.src = 'assets/images/pow.webp'; 
 }
 
 function changeImageBasedOnScore(score) {
-  var imgElement = document.getElementById('quiz-image');
+  var imgElement = document.getElementById('quiz-image'); // replacement images for belt system
   switch(score) {
     case 1:
-      imgElement.src = 'assets/images/WhiteBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/WhiteBelt.webp'; 
       break;
     case 2:
-      imgElement.src = 'assets/images/OrangeBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/OrangeBelt.webp'; 
       break;
-    // Add more cases as needed
     case 3:
-      imgElement.src = 'assets/images/RedBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/RedBelt.webp'; 
       break;
       case 4:
-      imgElement.src = 'assets/images/YellowBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/YellowBelt.webp'; 
       break;
       case 5:
-      imgElement.src = 'assets/images/GreenBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/GreenBelt.webp'; 
       break;
       case 6:
-      imgElement.src = 'assets/images/PurpleBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/PurpleBelt.webp'; 
       break;
       case 7:
-      imgElement.src = 'assets/images/PurpleWhiteBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/PurpleWhiteBelt.webp'; 
       break;
       case 8:
-      imgElement.src = 'assets/images/BrownBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/BrownBelt.webp'; 
       break;
       case 9:
-      imgElement.src = 'assets/images/BrownWhiteBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/BrownWhiteBelt.webp'; 
       break;
       case 10:
-      imgElement.src = 'assets/images/Brown2WhiteBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/Brown2WhiteBelt.webp'; 
       break;
       case 11:
-      imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
+      imgElement.src = 'assets/images/BlackBelt.webp'; 
       break;
     default:
       imgElement.src = 'assets/images/shrine-154572_640.webp'; // Default image
@@ -160,7 +161,7 @@ function changeImageBasedOnScore(score) {
 
 function changeImageAllCorrect() {
   var imgElement = document.getElementById('quiz-image');
-  imgElement.src = 'assets/images/BlackBelt.webp'; // Update with the path to your new image
+  imgElement.src = 'assets/images/BlackBelt.webp'; 
 }
 
 // Example function to simulate a wrong answer
@@ -172,9 +173,3 @@ function onWrongAnswer() {
 function onCorrectAnswer() {
   changeImageOnCorrectAnswer();
 }
-
-// Simulate a wrong answer after 3 seconds (for demonstration purposes)
-// setTimeout(onWrongAnswer, 3000);
-
-// Simulate a correct answer after 3 seconds (for demonstration purposes)
-// setTimeout(onCorrectAnswer, 3000);
