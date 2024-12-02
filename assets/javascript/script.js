@@ -117,6 +117,7 @@ let app = {
     this.showQuestion();
   },
 
+  // question functions
   showQuestion: function() {
     if (this.currPosition < 11 && this.currPosition < questions.length) {
       let question = questions[this.currPosition];
@@ -134,6 +135,7 @@ let app = {
     }
   },
 
+  // answer functions
   checkAnswer: function(userAnswer) {
     let question = questions[this.currPosition];
     if (userAnswer === question.correctAnswer) {
@@ -158,6 +160,7 @@ document.getElementById('normal-btn').onclick = () => app.start('normal');
 document.getElementById('hard-btn').onclick = () => app.start('hard');
 document.getElementById('reset-btn').addEventListener('click', resetQuiz);
 
+// reset functions
 function resetQuiz() {
   app.start(app.difficulty);
   document.getElementById('result').textContent = '';
@@ -234,6 +237,7 @@ function changeImageBasedOnScore(score) {
   }
 }
 
+// image for grading success
 function changeImageAllCorrect() {
   var imgElement = document.getElementById('quiz-image');
   imgElement.src = 'assets/images/BlackBelt.webp';
