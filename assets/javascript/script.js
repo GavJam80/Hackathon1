@@ -118,7 +118,7 @@ let app = {
   },
 
   showQuestion: function() {
-    if (this.currPosition < questions.length) {
+    if (this.currPosition < 11 && this.currPosition < questions.length) {
       let question = questions[this.currPosition];
       document.getElementById('title').textContent = question.title;
       let choices = document.querySelectorAll('.alternative');
@@ -146,7 +146,6 @@ let app = {
       if (this.difficulty === 'hard') {
         changeImageBasedOnScore(this.score);
         document.getElementById('result').textContent += ' Game over! Your score is: ' + this.score;
-        return;
       }
     }
     this.currPosition++;
