@@ -1,8 +1,15 @@
+
+<p align="center">
+| <a href="https://gavjam80.github.io/Hackathon1/" target="_blank">Link to Project</a> |
+</p>
+
 # Karate Term quiz 
 
 A simple, multiple-choice quiz focused on improving the user's knowledge of Japanese terms used within martial arts - and specifically wihtin Karate - and their English translation/ equivalent. 
 
 Created by Gavin, Prabin & Maja. 
+
+![main](/docs/karate-quiz-desk.png)
 
 
 ## Table of Contents
@@ -105,11 +112,13 @@ Ultimately the suggestions were not included in the final project due to conflic
 
 Prior to starting the project, we designed prospective wireframes using [Balsamiq](#https://balsamiq.com/wireframes/) to have an idea of the quiz's design, layout and feature placement. As the quiz was desinged to be accessible on a mobile device first rather than on a laptop/desktop, the initial design included a dropdown icon with the start, restart and instruction buttons, alongside a progress bar at the top of the page. 
 
-[screenshot!]. 
+![mobile](/docs/phone.png)
 
 On a desktop/laptop, the design was similar. However, for future project implementations, a starting page was included in the laptop/ desktop design, which would've meant that the users were not immedietly taken to the game page but could take the time to read the instructions, prepare themselves etc. 
 
-[screenshots!]
+![desktop](/docs/desk1.png)
+<br>
+![desktop](/docs/desk2.png)
 
 #### Final Wireframes 
 
@@ -128,14 +137,17 @@ The color scheme for this project was a combination of red, white and black. Whi
 
 Therefore, in order to remain in line with the design choices of most martial arts schools, we opted for the bolder color scheme and simplified layout. 
 
-Furthermore, it was decided that the background would be changed from white to black/licorice to redcue any eye strain. Some users would most likely be repeating the quiz multiple times, and to make our quiz more efficient, it was agreed that the screen layout shouldn't be causing any fatigue or strain on the user after only being used for a short amount of time (as was the likelihood with the white backgound).
+Furthermore, it was decided that the background would be changed from white to black/licorice to redcue any eye strain. Some users would most likely be repeating the quiz multiple times, and to make our quiz more efficient, it was agreed that the screen layout shouldn't be causing any fatigue or strain on the user after only being used for a short amount of time (as was the likelihood with the white backgound, as shown below).
 
-[snapshot here!!] 
+![design](/docs/karate-quiz-desk.png)
+<br>
+![design2](/docs/webapp.png)
 
 
 The Martial Artist color palette we used was generated using the [Coolors image picker](#https://coolors.co/image-picker) derived from our logo and favicon. 
 
-[insert snapshot!] 
+![color](/docs/MA-color-palette.png)
+<br>
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
@@ -161,7 +173,7 @@ The Martial Artist color palette we used was generated using the [Coolors image 
 The logo and favicon for this project were found on [FreePik](#https://www.freepik.com/premium-vector/karate-logo-with-red-sunset_24779702.htm)
 and converted into the appropriate file using Favicon conversion. 
 
-{enter image here! }
+![logo](/docs/karate-logo-with-red-sunset_109706-134.avif)
 
 One issue we encountered at this stage was finding an appropriate icon which was free - we initially found an icon which suited the project design however it was only available via subscription and it could not be converted from a png to a css image online, which limited us to finding a free option instead. 
 
@@ -176,11 +188,12 @@ The key features of the quiz included:
 * Immediate feedback on correct/incorrect answers ("Correct!" or "Incorrect!" comments)
 * Final score display ("Your score is ..")
 * Option to restart the quiz
-* Difficulty levels 
+* Difficulty levels
+* Quiz beginning once difficulty has been selected
+
+![mobile](/docs/mobile1.png) 
 
 We additionally wished to include an icon-based scoring system (e.g., karate belts or fists), immediete feedback through highlighted answer options and a progress bar however this was not accomplished due to bugs and time contraints - therefore these are included within the Future Improvements section. 
-
-[add screenshots] 
 
 ## Validation
 
@@ -211,7 +224,7 @@ The validation for javascript for our quiz returned no issues.
 
 
 ### Lighthouse testing
-Official lighthouse testing of our quiz revealed a ..... 
+Official lighthouse testing of our quiz revealed: 
 
 ![Lighthouse score](https://github.com/user-attachments/assets/047b4c43-5630-4115-93dd-64e41c8593ff)
 
@@ -252,7 +265,7 @@ Therefore in future developments of this quiz, we would like to further develop 
 * A progress bar to keep users informed of thier progress
 * A modal-pop up with instructions
 * Immediete feedback througy highlighted answer boxes (correct highlighted in green, incorrect answers highlighted in red).
-* 
+
 ## Acknowledgements
 
 Code and Content Project and primary learning supplied by Code Institute, with support throughout the project from:
