@@ -1,3 +1,4 @@
+// Array of questions
 let questions = [
   {
     title: '6',
@@ -54,8 +55,59 @@ let questions = [
     alternatives: ['strike', 'belt', 'receive', 'give'],
     correctAnswer: 1
   },
-  
+  {
+    title: 'Kihon',
+    alternatives: ['foot', 'elbow', 'shout', 'basics'],
+    correctAnswer: 3
+  },
+  {
+    title: 'Hiza',
+    alternatives: ['elbow', 'foot', 'knee', 'eye'],
+    correctAnswer: 2
+  },
+  {
+    title: 'Sensei',
+    alternatives: ['throw', 'shout', 'uniform', 'teacher'],
+    correctAnswer: 3
+  },
+  {
+    title: 'barai',
+    alternatives: ['strike', 'push', 'receive', 'sweep'],
+    correctAnswer: 3
+  },
+  {
+    title: 'kime',
+    alternatives: ['focus', 'sit', 'breathe', 'fall'],
+    correctAnswer: 0
+  },
+  {
+    title: 'rei',
+    alternatives: ['sit', 'stand', 'bow', 'fall'],
+    correctAnswer: 2
+  },
 ];
+
+// Function to shuffle the array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// Shuffle the questions array
+shuffleArray(questions);
+
+// Function to display the questions (example)
+function displayQuestions() {
+  questions.forEach((q, index) => {
+    console.log(`Question ${index + 1}: ${q.title}`);
+    // Add code to display the question in the UI
+  });
+}
+
+// Call the function to display the questions
+displayQuestions();
 
 let app = {
   start: function(difficulty) {
