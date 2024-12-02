@@ -107,6 +107,14 @@ document.getElementById('normal-btn').onclick = () => app.start('normal');
 document.getElementById('hard-btn').onclick = () => app.start('hard');
 document.getElementById('reset-btn').addEventListener('click', resetQuiz);
 
+function resetQuiz() {
+  app.start(app.difficulty);
+  document.getElementById('result').textContent = '';
+  var imgElement = document.getElementById('quiz-image');
+  imgElement.src = 'assets/images/shrine-154572_640.webp';
+  imgElement.alt = 'Default Image';
+}
+
 
 // Wrong or correct image
 function changeImageOnWrongAnswer() {
@@ -181,48 +189,4 @@ function changeImageAllCorrect() {
   imgElement.alt = 'Black belt winner'; 
 }
 
-// function to simulate a wrong answer
-function onWrongAnswer() {
-  changeImageOnWrongAnswer();
-}
 
-// function to simulate a correct answer
-function onCorrectAnswer() {
-  changeImageOnCorrectAnswer();
-}
-
-function resetQuiz() {
-    // Reset state variables
-    currentQuestionIndex = 0;
-    score = 0;
-
-    // Reset quiz content
-    const quizContent = document.getElementById('quiz-content');
-    quizContent.innerHTML = '';
-
-    const title = document.createElement('div');
-    title.id = 'title';
-    title.textContent = 'Select a difficulty to start the quiz';
-    quizContent.appendChild(title);
-
-    const choices = document.createElement('ul');
-    choices.id = 'choices';
-    ['Take', 'Your', 'Best', 'Shot'].forEach(text => {
-        const li = document.createElement('li');
-        li.className = 'alternative';
-        li.textContent = text;
-        choices.appendChild(li);
-    });
-    quizContent.appendChild(choices);
-
-    const result = document.createElement('div');
-    result.id = 'result';
-    quizContent.appendChild(result);
-
-    const scoreDiv = document.createElement('div');
-    scoreDiv.id = 'score';
-    quizContent.appendChild(scoreDiv);
-
-    // Reset quiz image
-    document.getElementById('quiz-image').src = 'assets/images/karate-logo-with-red-sunset_109706-134.avif';
-}
