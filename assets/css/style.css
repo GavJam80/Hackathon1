@@ -122,7 +122,7 @@ ul {
 #image-placeholder img {
     width: 100%; /* Ensure the image takes up the full width of the placeholder */
     height: auto; /* Maintain aspect ratio */
-    padding-top: 20px;
+    padding-top: 15px; /* Add padding for spacing */
 }
 
 #normal-btn, #hard-btn {
