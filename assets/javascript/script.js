@@ -55,7 +55,36 @@ let questions = [
     alternatives: ['strike', 'belt', 'receive', 'give'],
     correctAnswer: 1
   },
-  
+  {
+    title: 'Kihon',
+    alternatives: ['foot', 'elbow', 'shout', 'basics'],
+    correctAnswer: 3
+  },
+  {
+    title: 'Hiza',
+    alternatives: ['elbow', 'foot', 'knee', 'eye'],
+    correctAnswer: 2
+  },
+  {
+    title: 'Sensei',
+    alternatives: ['throw', 'shout', 'uniform', 'teacher'],
+    correctAnswer: 3
+  },
+  {
+    title: 'barai',
+    alternatives: ['strike', 'push', 'receive', 'sweep'],
+    correctAnswer: 3
+  },
+  {
+    title: 'kime',
+    alternatives: ['focus', 'sit', 'breathe', 'fall'],
+    correctAnswer: 0
+  },
+  {
+    title: 'rei',
+    alternatives: ['sit', 'stand', 'bow', 'fall'],
+    correctAnswer: 2
+  },
 ];
 
 // Function to shuffle the array
