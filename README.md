@@ -146,7 +146,7 @@ Furthermore, it was decided that the background would be changed from white to b
 
 The Martial Artist color palette we used was generated using the [Coolors image picker](#https://coolors.co/image-picker) derived from our logo and favicon. 
 
-![color](/docs/MA-color-palette.png)
+![colorpallete]docs/MA color palette.png
 <br>
 
 | Color             | Hex                                                                |
