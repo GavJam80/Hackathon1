@@ -195,6 +195,9 @@ ul {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+/* Responsive Styles */
+
+
 @media (min-width: 1200px) {
     #quiz-container {
         flex-direction: row; /* Change to row layout */
