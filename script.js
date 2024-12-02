@@ -102,12 +102,12 @@ let app = {
   }
 };
 
-// Add event listeners to the difficulty buttons
+// Event listeners to the difficulty buttons
 document.getElementById('normal-btn').onclick = () => app.start('normal');
 document.getElementById('hard-btn').onclick = () => app.start('hard');
 
 
-// wrong or correct image
+// Wrong or correct image
 function changeImageOnWrongAnswer() {
   var imgElement = document.getElementById('quiz-image'); 
   imgElement.src = 'assets/images/KarateSausage.webp'; 
@@ -118,8 +118,9 @@ function changeImageOnCorrectAnswer() {
   imgElement.src = 'assets/images/pow.webp'; 
 }
 
+// Replacement images for belt system
 function changeImageBasedOnScore(score) {
-  var imgElement = document.getElementById('quiz-image'); // replacement images for belt system
+  var imgElement = document.getElementById('quiz-image'); 
   switch(score) {
     case 1:
       imgElement.src = 'assets/images/WhiteBelt.webp'; 
@@ -164,12 +165,12 @@ function changeImageAllCorrect() {
   imgElement.src = 'assets/images/BlackBelt.webp'; 
 }
 
-// Example function to simulate a wrong answer
+// function to simulate a wrong answer
 function onWrongAnswer() {
   changeImageOnWrongAnswer();
 }
 
-// Example function to simulate a correct answer
+// function to simulate a correct answer
 function onCorrectAnswer() {
   changeImageOnCorrectAnswer();
 }

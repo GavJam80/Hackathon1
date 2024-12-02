@@ -171,6 +171,30 @@ ul {
     box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
+#difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between buttons */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+#difficulty-buttons button {
+    background: red; /* Background color */
+    color: white; /* Text color */
+    border: 3px solid black; /* Border */
+    padding: 15px 30px; /* Increase padding */
+    font-size: 36px; /* Increase font size */
+    font-weight: bold; /* Font weight */
+    border-radius: 10px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+#difficulty-buttons button:hover {
+    background: darkred; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 @media (min-width: 1200px) {
     #quiz-container {
         flex-direction: row; /* Change to row layout */
