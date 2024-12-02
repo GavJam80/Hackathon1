@@ -1,7 +1,41 @@
+.mochiy-pop-one-regular {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Global Styles */
 body {
-    background: whitesmoke;
-    font-family: ariel;
+    background: black;
+    font-family: "Mochiy Pop One", sans-serif; /* Apply Mochiy Pop One font to all elements */
     text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold;
+    margin: 10px 0; /* Combine margin-top and margin-bottom */
+    color: white;
+    text-decoration: underline;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 30px; /* Adjust font size */
+    margin: 10px 0; /* Combine margin-top and margin-bottom */
+    color: white;
+}
+
+/* Quiz Paragraph Styles */
+p, #quiz p {
+    font-size: 18px; /* Adjust font size */
+    margin: 10px 0; /* Combine margin-top and margin-bottom */
+    color: white;
 }
 
 #wrapper {
@@ -10,40 +44,53 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Add gap between flex items */
+    padding: 10px; /* Add padding to the wrapper */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 #wrapper div, #wrapper ul {
-    width: 70%; /* Increase width to allow for longer questions and answers */
+    width: 100%; /* Make elements take full width */
     max-width: 600px; /* Increase max-width */
 }
 
 ul {
     padding: 0;
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Gap between grid items */
+    justify-items: center; /* Center items horizontally */
 }
 
 #title {
-    font-size: 24px; /* Increase font size for the question */
+    font-size: 24px; /* Adjust font size */
     font-weight: bold;
     background: red;
     border: 3px solid black; /* Add border for better visibility */
-    padding: 20px; /* Increase padding for more space */
-    margin-bottom: 20px; /* Add margin below title */
+    padding: 10px; /* Adjust padding */
+    margin-bottom: 10px; /* Adjust margin */
+    border-radius: 10px; /* Round the edges */
+    color: white;
 }
 
 #header {
     background: red;
     border: 3px solid black;
     padding: 10px;
-    margin-bottom: 20px; /* Add margin below header */
+    margin-bottom: 10px; /* Adjust margin */
+    border-radius: 10px; /* Round the edges */
 }
 
 .alternative {
     list-style-type: none;
-    margin-bottom: 10px; /* Increase margin between alternatives */
-    padding: 15px; /* Increase padding for more space */
+    padding: 10px; /* Adjust padding */
     background: red; /* Add background color for better visibility */
     border: 3px solid black; /* Add border for better visibility */
     cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    color: white;
+    border-radius: 10px; /* Round the edges */
+    width: 100%; /* Ensure the items take full width of the grid cell */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 18px; /* Adjust font size */
 }
 
 .alternative:hover {
@@ -53,23 +100,167 @@ ul {
 
 #result {
     font-weight: bold;
-    margin-top: 20px; /* Add margin above result */
+    margin-top: 10px; /* Adjust margin */
+    font-size: 24px; /* Adjust font size */
 }
 
 #score, #result {
-    color: black;
+    color: white;
 }
 
 #score {
-    margin-top: 20px; /* Add margin above score */
+    margin-top: 10px; /* Adjust margin */
+    font-size: 24px; /* Adjust font size */
 }
 
 #image-placeholder {
-    width: 33%; /* Set width to 33% of the screen */
-    margin-top: 20px; /* Add margin above the image placeholder */
+    width: 70%; /* Reduce the size by 30% */
+    max-width: 600px;
+    margin-top: 20px; /* Add margin for spacing */
 }
 
 #image-placeholder img {
     width: 100%; /* Ensure the image takes up the full width of the placeholder */
     height: auto; /* Maintain aspect ratio */
+}
+
+#normal-btn, #hard-btn {
+    background: red; /* Background color */
+    color: white; /* Text color */
+    border: 3px solid black; /* Border */
+    padding: 10px 20px; /* Padding */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+    border-radius: 10px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; /* Margin between buttons */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+#normal-btn:hover, #hard-btn:hover {
+    background: darkred; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#header, #title, .alternative, #result, #score, #image-placeholder {
+    width: 100%; /* Make elements take full width */
+    max-width: 600px; /* Increase max-width */
+    margin: 0 auto; /* Center elements */
+    padding: 10px; /* Add padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+#quiz-image {
+    display: none; /* Hide the image by default */
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column; /* Default to column layout */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+#quiz-content {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+#difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Add space between buttons */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+#difficulty-buttons button {
+    background: red; /* Background color */
+    color: white; /* Text color */
+    border: 3px solid black; /* Border */
+    padding: 15px 30px; /* Increase padding */
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Font weight */
+    border-radius: 10px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+#difficulty-buttons button:hover {
+    background: darkred; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (min-width: 1200px) {
+    #quiz-container {
+        flex-direction: row; /* Change to row layout */
+        justify-content: space-between; /* Space between quiz content and image */
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    #quiz-content, #image-placeholder {
+        width: 48%; /* Set both quiz content and image to 48% width to allow for some gap */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    #quiz-content {
+        padding: 20px; /* Add padding for larger screens */
+    }
+
+    #image-placeholder {
+        width: 34%; /* Set image placeholder to 34% width to account for the 30% reduction */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    #quiz-image {
+        display: block; /* Show the image when screen width is over 1200px */
+        width: 100%; /* Ensure the image takes up the full width of the placeholder */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1 {
+        font-size: 32px; /* Increase font size for larger screens */
+    }
+
+    p, #quiz p {
+        font-size: 24px; /* Increase font size for larger screens */
+    }
+
+    .alternative {
+        font-size: 20px; /* Increase font size for larger screens */
+        padding: 15px; /* Increase padding for larger screens */
+    }
+
+    #result, #score {
+        font-size: 28px; /* Increase font size for larger screens */
+    }
+}
+
+@media (max-width: 992px) {
+    p, #quiz p, h1, #title, #header, .alternative, #result, #score, #image-placeholder {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    p, #quiz p, h1, #title, #header, .alternative, #result, #score, #image-placeholder {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    p, #quiz p, h1, #title, #header, .alternative, #result, #score, #image-placeholder {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    p, #quiz p, h1, #title, #header, .alternative, #result, #score, #image-placeholder {
+        padding: 5px; /* Adjust padding for smaller screens */
+        font-size: large;
+    }
 }
