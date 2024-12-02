@@ -27,7 +27,7 @@ The quiz itself includes two game modes: Training & Grading. While both modes ar
 
 #### Training
 
-The training mode allows users to continue the game even when they chose the incorrect answer. They recieve feedback ("Correct!" or "Incorrect!"), however they are not immedietly terminated from that game round, allowing them to continue practicing until th equiestions finish or to server as a 'refresher' round. 
+The training mode allows users to continue the game even when they chose the incorrect answer. They recieve feedback ("Correct!" or "Incorrect!"), however they are not immedietly terminated from that game round, allowing them to continue practicing until the quiestions finish or to serve as a 'refresher' round. 
 
 This was created with younger learners in mind, as repeated game termination with every incorrect answer may serve as a source of frustration, annoyance and a deterrant to learning. Therefore, allowing a 'lower stakes' game mode ensures this is accessible for them to complete and learn from appropriately. 
 
@@ -36,6 +36,8 @@ This was created with younger learners in mind, as repeated game termination wit
 The grading mode was designed with adults in mind, with the quiz terminating once an incorrect asnwer is given. 
 
 Unlike the training mode which offers feedback but allows the user to complete the quiz regardless of an incorect answer being given, the grading mode was desinged to encourage focus, attention and memorization through 'higher stakes' gaming (immediete termination and a 'loss of progress' in that particular game round). 
+
+The player is given a visual belt award in desktop mode.
 
 
 ## Objectives
@@ -209,7 +211,7 @@ Official lighthouse testing of our quiz revealed a .....
 
 ## Issues
 
-Some of the issues we faced was integrating front end layout with the original javascript. 
+Some of the issues we faced were integrating front end layout with the original javascript. 
 
 The original javascript included two forms of the game (for children & adults), however once the initial front-end additions were added, the javascript no longer worked. 
 * This issue stemmed from the inclusion of Bootstrap grids, when the initial code was designed with Flexbox in mind. 
