@@ -115,7 +115,10 @@ On a desktop/laptop, the design was similar. However, for future project impleme
 
 Throughout the project, the wireframe deviated from the inital wireframe design. 
 
-[screenshots!]
+![New Wireframe 2](https://github.com/user-attachments/assets/c2c11395-d837-49a0-8599-d4b4e591670e)
+
+![ios](https://github.com/user-attachments/assets/bf9f199b-b7f0-42b3-a673-12359641afaa)
+
 
 ## Design
 
