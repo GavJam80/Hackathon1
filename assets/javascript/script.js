@@ -110,12 +110,14 @@ document.getElementById('hard-btn').onclick = () => app.start('hard');
 // Wrong or correct image
 function changeImageOnWrongAnswer() {
   var imgElement = document.getElementById('quiz-image'); 
-  imgElement.src = 'assets/images/KarateSausage.webp'; 
+  imgElement.src = 'assets/images/KarateSausage.webp';
+  imgElement.alt = 'Karate Sausage';
 }
 
 function changeImageOnCorrectAnswer() {
   var imgElement = document.getElementById('quiz-image');
   imgElement.src = 'assets/images/pow.webp'; 
+  imgElement.alt = 'Pow success';
 }
 
 // Replacement images for belt system
@@ -124,45 +126,58 @@ function changeImageBasedOnScore(score) {
   switch(score) {
     case 1:
       imgElement.src = 'assets/images/WhiteBelt.webp'; 
+      imgElement.alt = 'White Belt';
       break;
     case 2:
       imgElement.src = 'assets/images/OrangeBelt.webp'; 
+      imgElement.alt = 'Orange Belt';
       break;
     case 3:
       imgElement.src = 'assets/images/RedBelt.webp'; 
+      imgElement.alt = 'Red Belt';
       break;
-      case 4:
+    case 4:
       imgElement.src = 'assets/images/YellowBelt.webp'; 
+      imgElement.alt = 'Yellow Belt';
       break;
-      case 5:
+    case 5:
       imgElement.src = 'assets/images/GreenBelt.webp'; 
+      imgElement.alt = 'Green Belt';
       break;
-      case 6:
+    case 6:
       imgElement.src = 'assets/images/PurpleBelt.webp'; 
+      imgElement.alt = 'Purple Belt';
       break;
-      case 7:
+    case 7:
       imgElement.src = 'assets/images/PurpleWhiteBelt.webp'; 
+      imgElement.alt = 'Purple and White Belt';
       break;
-      case 8:
+    case 8:
       imgElement.src = 'assets/images/BrownBelt.webp'; 
+      imgElement.alt = 'Brown Belt';
       break;
-      case 9:
+    case 9:
       imgElement.src = 'assets/images/BrownWhiteBelt.webp'; 
+      imgElement.alt = 'Brown and White Belt';
       break;
-      case 10:
+    case 10:
       imgElement.src = 'assets/images/Brown2WhiteBelt.webp'; 
+      imgElement.alt = 'Brown and Two White Stripes Belt';
       break;
-      case 11:
+    case 11:
       imgElement.src = 'assets/images/BlackBelt.webp'; 
+      imgElement.alt = 'Black Belt';
       break;
     default:
-      imgElement.src = 'assets/images/shrine-154572_640.webp'; // Default image
+      imgElement.src = 'assets/images/shrine-154572_640.webp'; 
+      imgElement.alt = 'Default Image';
   }
 }
 
 function changeImageAllCorrect() {
   var imgElement = document.getElementById('quiz-image');
-  imgElement.src = 'assets/images/BlackBelt.webp'; 
+  imgElement.src = 'assets/images/BlackBelt.webp';
+  imgElement.alt = 'Black belt winner'; 
 }
 
 // function to simulate a wrong answer
