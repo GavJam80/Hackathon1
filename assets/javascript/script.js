@@ -179,7 +179,7 @@ function changeImageBasedOnScore(score) {
       break;
     default:
       imgElement.src = 'assets/images/shrine-154572_640.webp'; 
-      imgElement.alt = 'Default Image';
+      imgElement.alt = 'image of a Japaneses shrine gate';
   }
 }
 
