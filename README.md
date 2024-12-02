@@ -257,12 +257,12 @@ Code and Content Project and primary learning supplied by Code Institute, with s
 * SME facilitator Mark 
 
 Supplemental learning resources directly used / referenced within this project:
-* [Perplexity.ai](#https://www.perplexity.ai) 
-* [Chat GPT](#https://chatgpt.com/)
-* [Google Gemini](#https://gemini.google.com)
+* [Perplexity.ai](https://www.perplexity.ai) 
+* [Chat GPT](https://chatgpt.com/)
+* [Google Gemini](https://gemini.google.com)
 * Co-pilot (Github)
-* [Favicon](#https://favicon.io/)
-* [Font Awesome](#https://fontawesome.com/)
-* [FreePik](#https://www.freepik.com/premium-vector/karate-logo-with-red-sunset_24779702.htm)
-* [Coolors](#https://coolors.co/image-picker)
+* [Favicon](https://favicon.io/)
+* [Font Awesome](https://fontawesome.com/)
+* [FreePik](https://www.freepik.com/premium-vector/karate-logo-with-red-sunset_24779702.htm)
+* [Coolors](https://coolors.co/image-picker)
 * [AI images](https://designer.microsoft.com/) 
