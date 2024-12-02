@@ -190,24 +190,28 @@ This included regular debugging and testing using the Dev Tools provided within 
 #### HTML
 No errors were returned when passing our code through the official [W3C validator](#https://validator.w3.org/).
 
-[screenshot!]
+![quiz html pass!](https://github.com/user-attachments/assets/d560359a-b541-479d-b996-ca208ff9f82f)
+
 
 #### CSS
 
 When passing through the official [Jigsaw validator](#https://jigsaw.w3.org/), our code returned no bugs or errors. 
 
-[screenshot!]
+![css validated](https://github.com/user-attachments/assets/80c2d643-e141-4d98-9800-7b6767327ec9)
+
 
 #### Javascript 
 
 The validation for javascript for our quiz returned no issues. 
 
-[screenshot!]
+![jsHintPass](https://github.com/user-attachments/assets/6bc3e457-2c86-43bb-a249-4f343edc72ab)
+
 
 ### Lighthouse testing
 Official lighthouse testing of our quiz revealed a ..... 
 
-[screenshot!]
+![Lighthouse score](https://github.com/user-attachments/assets/047b4c43-5630-4115-93dd-64e41c8593ff)
+
 
 ## Issues
 
@@ -261,4 +265,4 @@ Supplemental learning resources directly used / referenced within this project:
 * [Font Awesome](#https://fontawesome.com/)
 * [FreePik](#https://www.freepik.com/premium-vector/karate-logo-with-red-sunset_24779702.htm)
 * [Coolors](#https://coolors.co/image-picker)
-* [AI images](https://designer.microsoft.com/))  
+* [AI images](https://designer.microsoft.com/) 
